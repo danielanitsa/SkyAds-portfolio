@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #19191B;
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom right, #5AD7FF, #D357FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.imageWrapper {
+  position: relative;
+  max-width: 126px;
+  width: 100%;
+  aspect-ratio: 25/6; 
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Home",
+    "url": "/"
+  },
+  {
+    "title": "Our Company",
+    "url": "/ourcompany"
+  },
+  {
+    "title": "Case Studies",
+    "url": "/casestudies"
+  },
+  {
+    "title": "Services",
+    "url": "/services"
+  }
+]
