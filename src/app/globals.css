@@ -12,6 +12,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+text-shadow: 1px 1px 16px  rgb(255, 255, 255, 0.30);
 }
 
 .imageWrapper {
@@ -20,3 +21,43 @@ body {
   width: 100%;
   aspect-ratio: 25/6; 
 }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+
+
+
+section {
+  opacity: 0;
+  transform: translateX(10px); /* Initial position */
+  animation: slide-in 0.8s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Initial position slightly further */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+}
+
+
+
+
