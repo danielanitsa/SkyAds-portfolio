@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "Brain",
+    "size": 34,
+    "text": {
+      "span": "Expert TikTok Advertising Knowledge:",
+      "paragraph": "Benefit from our deep understanding of the TikTok platform and stay ahead of the competition with our cutting-edge strategies."
+    }
+  },
+  {
+    "icon": "CreditCard",
+    "size": 34,
+    "text": {
+      "span": "Cost-effective Solution:",
+      "paragraph": "Maximize your return on investment with our affordable yet highly effective TikTok advertising solutions. No more wasting resources on ineffective campaigns."
+    }
+  },
+  {
+    "icon": "BarChart4",
+    "size": 34,
+    "text": {
+      "span": "Transparent Reporting and Analytics:",
+      "paragraph": "Stay informed about your campaign performance with detailed reports and analytics. Gain valuable insights to refine your strategy and make data-driven decisions."
+    }
+  },
+  {
+    "icon": "Percent",
+    "size": 34,
+    "text": {
+      "span": "Exceptional ROI and Sales Impact:",
+      "paragraph": "Watch your TikTok influence translate into real business outcomes. Our strategies are designed to drive measurable ROI and boost your sales."
+    }
+  }
+]

@@ -48,20 +48,21 @@ const HeroContent: FC = () => {
 
 const Herosection: FC = () => {
   return (
-    <section className="flex items-center justify-center flex-col mx-auto my-12 lg:flex-row space-x-6">
+    <main className="flex items-center justify-center flex-col mx-auto my-12 lg:flex-row space-x-6">
       <HeroContent />
-      <div className="relative w-full max-w-[420px] aspect-square my-6 lg:max-w-[600px]  lg:my-0">
+      <div className="relative w-full max-w-[420px] aspect-square my-6 lg:max-w-[650px]   lg:my-0">
         <Image
           src={entrepreneur}
           alt="happy entrepreneur with our tiktok ads services"
-          style={{ objectFit: "contain", zIndex: -1 }}
+          style={{ objectFit: "contain" }}
           quality={100}
           sizes="(max-width: 640px) 30vw, (min-width: 1024px) 30vw"
           fill
           priority
+          className="-z-50"
         />
       </div>
-    </section>
+    </main>
   );
 };
 

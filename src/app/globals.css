@@ -1,27 +1,33 @@
+/* Base styles provided by Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles */
 
+/* Set the background color for the body */
 body {
   background-color: #19191B;
 }
 
+/* Apply gradient effect to text */
 .gradient {
   background-image: linear-gradient(to bottom right, #5AD7FF, #D357FF);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-text-shadow: 1px 1px 16px  rgb(255, 255, 255, 0.30);
+  text-shadow: 1px 1px 16px rgb(255, 255, 255, 0.30);
 }
 
+/* Styles for the image wrapper */
 .imageWrapper {
   position: relative;
   max-width: 126px;
   width: 100%;
-  aspect-ratio: 25/6; 
+  aspect-ratio: 25/6;
 }
 
+/* Animation to slide in the navigation */
 @keyframes slideIn {
   0% {
     transform: translateY(-100%);
@@ -33,20 +39,20 @@ text-shadow: 1px 1px 16px  rgb(255, 255, 255, 0.30);
   }
 }
 
+/* Apply slide-in animation to the navigation */
 nav {
   animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   opacity: 0;
 }
 
-
-
-
-section {
+/* Animation to slide in the main content */
+main {
   opacity: 0;
   transform: translateX(10px); /* Initial position */
   animation: slide-in 0.8s ease-in-out forwards;
 }
 
+/* Apply slide-in animation to the main content */
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -58,6 +64,32 @@ section {
   }
 }
 
+/* Animation to slide in the benefits section */
+.benefits-section {
+  opacity: 0;
+  transform: translateX(100px); /* Initial position off-screen right */
+  animation: slide-in 1s cubic-bezier(0.5, 0, 0.75, 0.5) forwards;
+}
 
+/* Apply slide-in animation to the benefits section */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* Initial position off-screen right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Final position */
+  }
+}
 
+/* Styles for the individual benefit items */
+.benefit-item {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
 
+/* Apply slide-in animation to the benefit items */
+.slide-in {
+  opacity: 1;
+}

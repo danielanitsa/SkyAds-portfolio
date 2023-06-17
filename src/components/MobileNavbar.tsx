@@ -36,12 +36,12 @@ const MobileNavbar: FC = () => {
         </button>
       </nav>
       <div
-        className={`transition-opacity duration-500 z-50  ${
+        className={`transition-opacity duration-500 fixed z-50  ${
           showMenu ? "opacity-100" : "opacity-0"
         }`}
       >
         {showMenu && (
-          <div className="fixed top-[70%] left-0 right-0 bottom-0 bg-[#0E0E0F] ">
+          <div className="fixed top-[70%] left-0 right-0 bottom-0  bg-[#0E0E0F] ">
             <div className="py-6">
               <ul className="flex flex-col items-center gap-4">
                 {navdata.map((link: NavbarTypes, index: number) => (
