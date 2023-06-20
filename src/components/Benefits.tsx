@@ -1,5 +1,6 @@
 "use client";
 import React, { FC, useEffect, useRef, useState } from "react";
+
 import { Brain, CreditCard, BarChart4, Percent } from "lucide-react";
 import content from "../../public/benefits-data.json";
 
@@ -20,12 +21,13 @@ const Benefits: FC = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.target === benefitsRef.current && entry.isIntersecting) {
             setIsVisible(true);
+            observer.unobserve(entry.target); // Stop observing once it's in view
           }
         });
       },
-      { threshold: 0.5 } // Change threshold as per your requirement
+      { threshold: 0.5 }
     );
 
     if (benefitsRef.current) {
@@ -40,14 +42,18 @@ const Benefits: FC = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-1 gap-6 lg:grid-cols-2 benefits-section">
+    <section
+      className={`grid grid-cols-1 gap-6 lg:grid-cols-2 benefits-section ${
+        isVisible ? "slide-in-benefits" : ""
+      }`}
+    >
       {content.map((item: BenefitItem, index: number) => (
         <div
           className={`flex flex-row items-center space-x-4 benefit-item ${
-            isVisible ? "slide-in" : ""
+            isVisible ? "slide-in-benefit" : ""
           }`}
           key={index}
-          ref={benefitsRef}
+          ref={index === 1 ? benefitsRef : null}
         >
           <div>{renderIcon(item.icon, item.size)}</div>
           <p className="capitalize">

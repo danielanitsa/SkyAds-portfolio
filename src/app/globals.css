@@ -49,11 +49,11 @@ nav {
 main {
   opacity: 0;
   transform: translateX(10px); /* Initial position */
-  animation: slide-in 0.8s ease-in-out forwards;
+  animation: slide-in-main 0.8s ease-in-out forwards;
 }
 
 /* Apply slide-in animation to the main content */
-@keyframes slide-in {
+@keyframes slide-in-main {
   from {
     opacity: 0;
     transform: translateX(20px); /* Initial position slightly further */
@@ -64,32 +64,37 @@ main {
   }
 }
 
-/* Animation to slide in the benefits section */
-.benefits-section {
-  opacity: 0;
-  transform: translateX(100px); /* Initial position off-screen right */
-  animation: slide-in 1s cubic-bezier(0.5, 0, 0.75, 0.5) forwards;
-}
-
-/* Apply slide-in animation to the benefits section */
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(100px); /* Initial position off-screen right */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* Final position */
-  }
-}
 
 /* Styles for the individual benefit items */
 .benefit-item {
-  transition: opacity 0.5s ease-in-out;
   opacity: 0;
+  transform: translateX(100px); /* Initial position off-screen right */
+  transition: opacity 1s ease-in-out 0.5s, transform 1s cubic-bezier(0.5, 0, 0.75, 0.5);
 }
 
 /* Apply slide-in animation to the benefit items */
-.slide-in {
+.slide-in-benefit {
   opacity: 1;
+  transform: translateX(0); /* Final position */
+}
+
+
+
+
+.gradient-border {
+    border: 3px solid;
+    border-image: linear-gradient(to bottom, #5AD7FF, #D357FF) 1;
+    padding: 20px;
+    text-align: center;
+    gap: 8px;
+    background-clip: border-box;
+    border-radius: 10px;
+  }
+
+
+  .simple-gradient {
+  background-image: linear-gradient(to bottom right, #5AD7FF, #D357FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
