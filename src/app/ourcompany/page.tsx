@@ -32,6 +32,7 @@ const page: FC = () => {
             priority
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -53,6 +54,7 @@ const page: FC = () => {
             alt="lightbulb style"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -74,6 +76,7 @@ const page: FC = () => {
             alt="our tiktok ads team"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -94,14 +97,15 @@ const page: FC = () => {
             alt="statistics dashboard"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
           Sky Ads dove headfirst into mastering the intricacies of the TikTok
           landscape. They immersed themselves in research, analysis, and
-          experimentation to understand the platform's algorithms, trends, and
-          audience behavior. This relentless pursuit of knowledge allowed them
-          to develop powerful strategies and methodologies that would drive
+          experimentation to understand the platform&apos;s algorithms, trends,
+          and audience behavior. This relentless pursuit of knowledge allowed
+          them to develop powerful strategies and methodologies that would drive
           tangible outcomes for their clients.
         </p>
       </div>
@@ -114,6 +118,7 @@ const page: FC = () => {
             alt="our team brainstorming strategies to achieve your goals"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -134,6 +139,7 @@ const page: FC = () => {
             alt="skype with our clients"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -155,6 +161,7 @@ const page: FC = () => {
             alt="skyrocketing your businesse's sales with tiktok ads"
             style={{ objectFit: "contain" }}
             quality={100}
+            sizes="(max-width: 1024px) 30vw, (min-width: 1024px) 25vw"
           />
         </div>
         <p className={styles.paragraph}>
@@ -179,7 +186,7 @@ const page: FC = () => {
           audiences worldwide.
         </p>
         <button
-          className="px-4 bg-[#D357FF] text-center uppercase py-3 rounded-md  md:py-6 lg:px-6"
+          className="px-4 bg-[#D357FF] border-2 border-[#7F57FF] font-semibold text-center uppercase py-3 rounded-md  md:py-6 lg:px-6"
           aria-label="book a call now button"
         >
           book a call now! - it&apos;s free

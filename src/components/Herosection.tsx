@@ -18,7 +18,7 @@ const HeroContent: FC = () => {
       <div className="space-y-3 flex flex-col md:flex-row space-x-4 md:items-center ">
         {/* first container */}
         <button
-          className="w-full bg-[#D357FF] text-center uppercase py-3 rounded-md  md:py-6 "
+          className="w-full bg-[#D357FF] text-center font-semibold uppercase py-3 rounded-md  border-2 border-[#7F57FF]  md:py-6 "
           aria-label="book a call now button"
         >
           book a call now! - it&apos;s free

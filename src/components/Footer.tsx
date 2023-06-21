@@ -12,31 +12,46 @@ interface NavbarTypes {
 
 const Footer: FC = () => {
   return (
-    <footer className="py-16 flex justify-center items-center  bg-[#0E0E0F] w-full  ">
-      <div className="flex gap-4 flex-col justify-center items-center mx-auto lg:flex-row lg:justify-between lg:gap-0 lg:px-10 lg:w-full  lg:mt-4 md:mt-6">
-        <Image
-          src={logo}
-          alt="SkyAds brand logo"
-          priority
-          style={{ objectFit: "contain" }}
-          quality={100}
-          width={176}
-          height={30}
-        />
+    <footer className="py-8 bg-[#0E0E0F]">
+      <div className="container mx-auto px-4 gap-4  flex flex-col md:flex-row items-center justify-between lg:gap-0">
+        <div className="flex items-center justify-center  md:mb-0">
+          <Image
+            src={logo}
+            alt="SkyAds brand logo"
+            priority
+            style={{ objectFit: "contain" }}
+            quality={100}
+            width={176}
+            height={30}
+          />
+        </div>
 
-        <ul className="flex flex-col gap-4 lg:flex-row">
+        <ul className="flex flex-col gap-3 md:flex-row justify-center items-center">
           {navdata.map((link: NavbarTypes, index: number) => (
             <li
               key={index}
-              className="capitalize transition ease-in-out delay-400 hover:text-[#D357FF]"
+              className="capitalize text-lg transition ease-in-out delay-400 hover:text-[#D357FF] mx-2 md:mx-4"
             >
               <Link href={link.url}>{link.title}</Link>
             </li>
           ))}
         </ul>
-        <div className="flex flex-row gap-2">
-          <Instagram size={24} />
-          <Facebook size={24} />
+
+        <div className="flex gap-2  md:mt-0">
+          <a
+            href="#"
+            aria-label="follow us on instagram"
+            className="text-gray-300 hover:text-white"
+          >
+            <Instagram size={28} />
+          </a>
+          <a
+            href="#"
+            aria-label="follow us on facebook"
+            className="text-gray-300 hover:text-white"
+          >
+            <Facebook size={28} />
+          </a>
         </div>
       </div>
     </footer>
